@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: nstbrowser-api
+    runtime: image
+    repo: https://github.com/YOUR_USERNAME/nstbrowser-render
+    region: frankfurt
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TOKEN
+        value: "60cd1e35-c5d4-4c20-bb2e-9494a15077a7"
+      - key: SERVER_PORT
+        value: "8848"
+    healthCheckPath: /health
